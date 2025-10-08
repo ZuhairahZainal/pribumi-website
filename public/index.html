@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pribumi Employment Agency</title>
+
+    <link rel="icon" type="image/png" href="./assets/logo.png" />
+    <link rel="apple-touch-icon" href="./assets/logo.png" />
+
+    <!-- Css -->
+    <link href="./output.css" rel="stylesheet">
+    <link href="./global.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
+  </head>
+
+  <body class="font-sans bg-white text-gray-800 overflow-x-hidden">
+
+<!-- Header -->
+<header id="scroll-header"
+  class="fixed top-0 left-0 w-full z-50 bg-white dark:bg-[#1b1f2a] shadow-md transition-all duration-500 transform -translate-y-full opacity-0">
+
+  <div class="flex items-center justify-between px-6 md:px-12 py-3 md:py-4">
+    
+    <!-- Logo + Brand -->
+    <div class="flex items-center gap-4">
+      <img src="./assets/logo.png" alt="Logo" 
+           class="brand-logo w-14 h-14 object-cover rounded-full" />
+      <span class="text-lg sm:text-xl font-semibold text-gray-800 dark:text-gray-100 hidden sm:inline">
+        Pribumi Employment Agency
+      </span>
+    </div>
+
+    <!-- Hamburger (Mobile only) -->
+    <button id="menu-toggle"
+      class="md:hidden text-3xl text-yellow-500 focus:outline-none">
+      ☰
+    </button>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex md:space-x-4">
+      <a href="#about" 
+        class="px-4 py-2 rounded-full text-sm 
+               bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200
+               hover:bg-yellow-400 hover:text-white transition">
+        about us
+      </a>
+      <a href="#services" 
+        class="px-4 py-2 rounded-full text-sm 
+               bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200
+               hover:bg-yellow-400 hover:text-white transition">
+        services
+      </a>
+      <a href="#contact" 
+        class="px-4 py-2 rounded-full text-sm 
+               bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200
+               hover:bg-yellow-400 hover:text-white transition">
+        contact us
+      </a>
+    </nav>
+  </div>
+
+  <!-- Mobile Nav (slides down under header) -->
+  <nav id="mobile-menu"
+    class="md:hidden max-h-0 opacity-0 pointer-events-none overflow-hidden 
+           transition-all duration-300 ease-in-out
+           flex flex-col items-center bg-white dark:bg-[#1b1f2a] px-6 space-y-2">
+    
+    <a href="#about"
+      class="w-full text-center px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 
+             hover:bg-yellow-400 hover:text-white rounded-lg transition">
+      About Us
+    </a>
+    <a href="#services"
+      class="w-full text-center px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 
+             hover:bg-yellow-400 hover:text-white rounded-lg transition">
+      Services
+    </a>
+    <a href="#contact"
+      class="w-full text-center px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 
+             hover:bg-yellow-400 hover:text-white rounded-lg transition">
+      Contact Us
+    </a>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section class="relative min-h-screen overflow-hidden">
+  <!-- MAIN HERO CONTENT (with gradient bg for mobile) -->
+  <div id="main-hero" class="relative z-10 h-full">
+    <div class="themed-hero min-h-screen pt-16 sm:pt-20 lg:pt-24 pb-12 
+                flex justify-center px-6 sm:px-12 lg:px-20 md:bg-transparent">
+      <div class="w-full max-w-6xl grid md:grid-cols-2 items-center">
+
+        <!-- Text Content -->
+        <div class="space-y-5 md:space-y-8 text-center md:text-left relative z-10">
+          <div class="flex justify-center md:justify-start">
+            <img src="./assets/logo.png" alt="Pribumi Logo"
+                 class="fade-in-up h-24 md:h-32 w-auto object-contain" />
+          </div>
+
+          <h1 class="fade-in-up font-extrabold text-transparent bg-clip-text 
+                     bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 
+                     drop-shadow-[0_4px_14px_rgba(251,191,36,0.6)] 
+                     leading-tight break-words"
+              style="font-size: clamp(3.3rem, 3vw, 10rem);">
+            Pribumi Employment <br /> Agency
+          </h1>
+
+          <p class="fade-in-up italic text-lg md:text-xl text-gray-600">
+            "Your trusted gateway to global talent"
+          </p>
+
+          <div class="fade-in-up flex justify-center md:justify-start gap-4 pt-4">
+            <a href="#contact"
+               class="px-6 py-3 text-lg bg-yellow-400 text-white rounded-full 
+                      hover:bg-yellow-500 hover:shadow-xl shadow-lg transition duration-300">
+              contact us
+            </a>
+            <a href="#about"
+               class="px-6 py-3 text-lg rounded-full text-gray-700 dark:text-gray-200
+                      transition duration-300 hover-text-gold">
+              learn more
+            </a>
+          </div>
+        </div>
+
+<!-- Hero Rotator -->
+<div class="relative z-10">
+  <div id="hero-rotator"
+       class="fade-in-up relative w-full mx-auto 
+              h-[18vh] sm:h-[24vh] md:h-[24vh] lg:h-[10vh] xl:h-[6vh]
+              overflow-hidden">
+
+    <!-- Front layer (start visible) -->
+    <div id="hero-a"
+         style="position:absolute; inset:0;
+                background:url('./assets/1.png') center / contain no-repeat;
+                opacity:1; transition:opacity 1000ms ease-in-out;"></div>
+
+    <!-- Back layer -->
+    <div id="hero-b"
+         style="position:absolute; inset:0;
+                background-position:center; background-repeat:no-repeat; background-size:contain;
+                opacity:0; transition:opacity 1000ms ease-in-out;"></div>
+
+    <noscript>
+      <img src="./assets/1.png" alt="Hero" class="w-full h-auto object-contain">
+    </noscript>
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+
+    <!-- INTRO VIDEO (full width background, desktop only) -->
+  <div id="intro-hero" class="absolute inset-0 z-0 hidden md:block">
+    <video autoplay muted loop playsinline id="intro-video" class="w-full h-full object-cover">
+      <source src="./assets/intro.mov" type="video/mp4" />
+      <img src="./assets/1.png" alt="Fallback" />
+    </video>
+  </div>
+</section>
+
+    <!-- Industry Images -->
+    <section id="about" class="overflow-x-hidden">    
+      <!-- Mobile Carousel -->
+      <div class="block md:hidden pt-6 overflow-hidden">
+        <div class="swiper mySwiper w-full overflow-hidden">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./assets/7.png" alt="Hospitality"
+                  class="block w-full max-w-full h-80 object-cover rounded-xl" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/8.png" alt="Construction"
+                  class="block w-full max-w-full h-80 object-cover rounded-xl" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/9.png" alt="Caregiving"
+                  class="block w-full max-w-full h-80 object-cover rounded-xl" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/10.png" alt="Domestic help"
+                  class="block w-full max-w-full h-80 object-cover rounded-xl" />
+            </div>
+          </div>
+          <div class="swiper-pagination mt-4"></div>
+        </div>
+      </div>
+
+      <!-- Desktop Grid -->
+      <div class="fade-in hidden md:grid grid-cols-4 gap-0 px-0">
+        <img src="./assets/7.png" alt="Hospitality" class="fade-in-up w-full h-80 object-cover" />
+        <img src="./assets/8.png" alt="Construction" class="fade-in-up w-full h-80 object-cover" />
+        <img src="./assets/9.png" alt="Caregiving" class="fade-in-up w-full h-80 object-cover" />
+        <img src="./assets/10.png" alt="Domestic help" class="fade-in-up w-full h-80 object-cover" />
+      </div>
+    </section>
+
+    <!-- About Us -->
+    <section  class="text-center py-16 px-6 fade-in">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-yellow-500 mb-4">ABOUT US</h2>
+      <p class="max-w-3xl mx-auto text-lg md:text-xl text-gray-700">
+        Trusted manpower solutions in Brunei. Connecting reliable foreign workers with the right employers
+        across industries and households.
+      </p>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="flex flex-col md:flex-row justify-center gap-8 px-6 pb-12">
+      <div class="bg-gray-100 p-8 rounded-xl shadow-md w-full md:w-1/3 text-center fade-in">
+        <h3 class="text-2xl font-bold text-yellow-500 mb-4">MISSION</h3>
+        <p class="text-base md:text-lg text-gray-700">
+          To support Brunei's businesses and households by sourcing dependable foreign manpower,
+          while upholding the highest standards of integrity, compliance, and care for both
+          employers and employees.
+        </p>
+      </div>
+      <div class="bg-gray-100 p-8 rounded-xl shadow-md w-full md:w-1/3 text-center fade-in">
+        <h3 class="text-2xl font-bold text-yellow-500 mb-4">VISION</h3>
+        <p class="text-base md:text-lg text-gray-700">
+          To be Brunei's most trusted and respected agency for foreign manpower solutions.
+        </p>
+      </div>
+    </section>
+
+    <!-- Our Services -->
+    <section id="services" class="py-32 md:py-40 px-6 bg-[#fdfdf5] relative overflow-hidden">
+      <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <!-- LEFT: Services -->
+        <div class="text-center md:text-left">
+          <h2 class="text-4xl font-extrabold text-gray-800 mb-8 border-l-8 border-yellow-400 pl-4">
+            <span class="text-yellow-500">OUR</span> SERVICES
+          </h2>
+          
+          <div class="grid sm:grid-cols-2 gap-6">
+            <div class="fade-in-up p-6 bg-white/70 rounded-2xl border border-yellow-100 shadow-xl" style="animation-delay: 0.2s">
+              <h3 class="text-xl font-bold text-yellow-500 mb-2">Foreign Workers Recruitment</h3>
+              <p class="text-gray-700">Connecting foreign workers for sectors such as construction, hospitality, cleaning, retail, and more through a transparent process.</p>
+            </div>
+            <div class="fade-in-up p-6 bg-white/70 rounded-2xl border border-yellow-100 shadow-xl" style="animation-delay: 0.4s">
+              <h3 class="text-xl font-bold text-yellow-500 mb-2">Domestic Helpers</h3>
+              <p class="text-gray-700">Carefully vetted and matched based on employer needs and household requirements.</p>
+            </div>
+            <div class="fade-in-up p-6 bg-white/70 rounded-2xl border border-yellow-100 shadow-xl" style="animation-delay: 0.6s">
+              <h3 class="text-xl font-bold text-yellow-500 mb-2">Work Permit & Documentation</h3>
+              <p class="text-gray-700">Efficient handling of processing, renewals, and compliance with the Department of Labour.</p>
+            </div>
+            <div class="fade-in-up p-6 bg-white/70 rounded-2xl border border-yellow-100 shadow-xl" style="animation-delay: 0.8s">
+              <h3 class="text-xl font-bold text-yellow-500 mb-2">Post-Placement Support</h3>
+              <p class="text-gray-700">Ongoing assistance to ensure smooth adaptation, satisfaction & resolution of any employment-related concerns.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Image (Now visible on all screens) -->
+        <div class="fade-in-up mt-12 md:mt-0">
+          <img src="./assets/6.png" alt="Our Services" class="w-full max-w-md mx-auto object-contain" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Section separator wave (light mode) -->
+    <div class="section-wave w-full overflow-hidden">
+  <svg class="block w-full h-auto" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
+    <path id="animatedWave" d="M0,160 C360,240 1080,80 1440,160 L1440,320 L0,320 Z"></path>
+  </svg>
+</div>
+
+    <!-- Location & Inquiry -->
+    <section id="contact" class="py-16 px-6 bg-gray-50">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-start fade-in">
+        
+        <!-- Location Info -->
+        <div class="bg-white p-8 shadow-lg rounded-lg fade-in-up">
+          <h2 class="text-3xl font-bold text-yellow-500 mb-4 border-b-4 border-yellow-400 pb-2">OUR LOCATION</h2>
+          
+          <div class="rounded-md overflow-hidden fade-in-up shadow mb-4">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3934.062416096827!2d114.91544474042118!3d4.909690537545059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3222f5ba6faadc43%3A0x4d82c36b40679cad!2sPribumi%20Employment%20Agency!5e0!3m2!1sen!2sbn!4v1759720420965!5m2!1sen!2sbn" 
+              width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+
+          <!-- Address block -->
+          <div class="text-gray-700 leading-relaxed space-y-2">
+            <p class="flex items-start gap-2">
+              <span class="text-xl">📍</span>
+              <span>
+                7B, 1st Floor, Hossain Building II,<br />
+                Simpang 103, Jalan Gadong, BE3719<br />
+                Negara Brunei Darussalam
+              </span>
+            </p>
+
+            <p class="flex items-center gap-2 mt-3 font-semibold text-gray-800">
+              📞 
+              <a href="tel:+6738795299" onclick="confirmCall(event)" class="text-yellow-500 hover:underline">
+                +673 8795299
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <!-- Inquiry Form -->
+        <div class="bg-white p-8 shadow-lg rounded-lg fade-in-up">
+          <h2 class="text-3xl font-bold text-yellow-500 mb-4 border-b-4 border-yellow-400 pb-2">FOR INQUIRIES</h2>
+          
+          <form id="inquiry-form" action="https://formspree.io/f/xgvnlwbo" method="POST" class="space-y-5">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+              <input type="text" name="name" placeholder="Your name" 
+                    class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-400" required />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+              <input type="email" name="email" placeholder="you@example.com"
+                    class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-400" required />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+              <textarea name="message" placeholder="How can we help you?" rows="4"
+                        class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-400" required></textarea>
+            </div>
+            <button type="submit" class="w-full py-3 bg-yellow-400 hover:bg-yellow-500 transition text-white font-semibold rounded-full shadow-md">
+              📩 Submit Inquiry
+            </button>
+          </form>
+
+          <!-- Success message -->
+          <p id="success-message" class="hidden mt-4 text-green-600 font-medium">✅ Your inquiry has been sent successfully!</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="hidden md:block bg-gray-900 text-white py-10 px-6">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+        
+        <!-- Logo & About -->
+        <div>
+          <h3 class="text-2xl font-bold text-yellow-400 mb-3">Pribumi Employment Agency</h3>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            Providing trusted and efficient manpower solutions tailored for domestic and foreign worker recruitment in Brunei Darussalam.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-lg font-semibold text-yellow-400 mb-3">Quick Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#about" class="hover:text-yellow-300 transition">About Us</a></li>
+            <li><a href="#services" class="hover:text-yellow-300 transition">Services</a></li>
+            <li><a href="#contact" class="hover:text-yellow-300 transition">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h4 class="text-lg font-semibold text-yellow-400 mb-3">Contact Info</h4>
+          <p class="text-sm text-gray-300">📍 Simpang 103, Jalan Gadong, BE3719</p>
+          <p class="text-sm text-gray-300">📞 <a href="tel:+6738795299" onclick="alert('Calling +673 8795299...')" class="text-yellow-300 hover:underline">+673 8795299</a></p>
+          <p class="text-sm text-gray-300">📧 <a href="mailto:marketing.pribumi.ea@gmail.com" class="text-yellow-300 hover:underline">info.pribumi.ea@gmail.com</a></p>
+          <div class="flex mt-4 space-x-4">
+            <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-400">
+        &copy; 2025 Pribumi Employment Agency. All rights reserved.
+      </div>
+    </footer>
+    
+    <!-- Floating Theme Toggle (bottom-right) -->
+    <button id="theme-fab"
+      class="fixed bottom-6 right-6 z-[60] h-14 w-14 rounded-full shadow-2xl 
+            grid place-items-center text-2xl text-white
+            transition-all duration-300 focus:outline-none"
+      title="Toggle theme" aria-label="Toggle theme">
+      ☾
+    </button>
+
+    <!-- JS -->
+    <script src="animation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </body>
+</html>

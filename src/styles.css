@@ -1,0 +1,11 @@
+/* Tailwind v4: just import the framework */
+@import "tailwindcss";
+
+/* Optional: define your design tokens in v4 via @theme */
+@theme {
+  --color-brand-gold: #E6C24A;
+  --color-brand-ink: #0f0f0f;
+  --font-display: "Poppins", ui-sans-serif, system-ui;
+  --font-sans: "Inter", ui-sans-serif, system-ui;
+  --shadow-soft: 0 10px 24px -10px rgba(0,0,0,.15);
+}
