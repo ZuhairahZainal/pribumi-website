@@ -87,38 +87,38 @@
 
 <!-- Hero -->
 <section class="relative min-h-[75vh] overflow-hidden bg-gradient-to-br from-white via-yellow-50 to-yellow-100">
-  <div id="main-hero" class="relative z-10 h-full">
-    <div class="themed-hero pt-16 sm:pt-20 lg:pt-24 pb-8 
+  <div id="main-hero" class="relative z-10">
+    <div class="themed-hero pt-16 sm:pt-20 lg:pt-24 pb-8
                 flex justify-center px-6 sm:px-12 lg:px-20 md:bg-transparent">
-
-      <div class="w-full max-w-6xl grid md:grid-cols-2 items-end p-16 lg:p-24 box-border">
+      <!-- use items-center instead of items-end -->
+      <div class="w-full max-w-6xl grid md:grid-cols-2 items-center">
 
         <!-- Text Content -->
-        <div class="space-y-5 md:space-y-8 text-center md:text-left relative z-10 pb-6">
+        <div class="space-y-5 md:space-y-8 text-center md:text-left relative z-10">
           <div class="flex justify-center md:justify-start">
             <img src="./assets/logo.png" alt="Pribumi Logo"
-                class="fade-in-up h-24 md:h-32 lg:h-36 w-auto object-contain" />
+                 class="fade-in-up h-24 md:h-32 lg:h-36 w-auto object-contain" />
           </div>
 
-          <h1 class="fade-in-up font-extrabold text-transparent bg-clip-text 
-                     bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 
-                     drop-shadow-[0_4px_14px_rgba(251,191,36,0.6)] 
+          <h1 class="fade-in-up font-extrabold text-transparent bg-clip-text
+                     bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600
+                     drop-shadow-[0_4px_14px_rgba(251,191,36,0.6)]
                      leading-tight break-words"
-              style="font-size: clamp(2rem, 3vw, 6rem);">
+              style="font-size: clamp(2rem, 3vw, 5rem);">
             Pribumi Employment <br /> Agency
           </h1>
 
-          <p class="fade-in-up italic text-lg md:text-l text-gray-700">
+          <p class="fade-in-up italic text-lg md:text-xl text-gray-700 block md:hidden">
             "Your trusted gateway to global talent"
           </p>
         </div>
 
-        <!-- Static Hero Image (Bottom-Aligned) -->
-        <div class="relative flex justify-center md:justify-end items-end">
-          <img src="./assets/15.png" 
+        <!-- Hero Image -->
+        <div class="relative flex justify-center md:justify-end items-center">
+          <img src="./assets/15.png"
                alt="Pribumi Hero Image"
-               class="fade-in-up bottom-0 right-0 w-auto 
-                      h-[45vh] sm:h-[50vh] md:h-[55vh] lg:h-[60vh]
+               class="fade-in-up w-auto
+                      h-[40vh] sm:h-[45vh] md:h-[50vh] lg:h-[55vh]
                       object-contain drop-shadow-2xl" />
         </div>
 
